@@ -1,0 +1,401 @@
+
+/* Fuente para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+/* Fuente para textos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* 
+palette
+#FBD1A2 --salmón
+#F7BF50 -- naranja
+#7DCFB6 -- verde claro
+#00B2CA -- azul claro
+#1D4E89 --azul naval
+*/
+
+/* General */
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 90%;
+    margin: auto;
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+}
+
+.no_fmt_link{
+    text-decoration: none;
+    color:black;
+}
+.t1{
+    font-family: 'Sora', sans-serif;
+}
+input[type=submit]{
+    font-family: "Roboto Condensed";
+    border:none;
+    font-size: 1.1em;
+    background-color: #1D4E89;
+    color: white;
+    padding: 0.2em;
+    width: 6em;
+    border-radius: 0.2em;
+    margin-top: 1em;
+}
+input[type=submit]:hover{
+    background-color: #00B2CA;
+    color: white;
+}
+input[type=text], input[type=password], input[type=number]{
+    border: none;
+    border-radius: 5px;
+    height: 1.5em;
+    width: 250px;
+    margin-bottom: 0.5em;
+}
+
+select{
+    font-family: 'Roboto Condensed';
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 0.8em;
+    padding: 0.1em;
+    width: 250px;
+    height: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+button{
+    font-family: 'Roboto Condensed';
+    font-size: 1.1em;
+    text-decoration: none;
+    padding:0.5em;
+    background-color: #1D4E89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.msg{
+    border-radius: 5px;
+    font-size: 1.5em;
+    width: fit-content;
+    padding: 1em;
+    background-color: #FBD1A2;
+    margin: auto;
+    margin-top: 1em;
+}
+
+.round_img{
+    border-radius: 50%;
+    width: 50px;
+}
+
+.btn2{
+    border:solid #F7BF50 0.2em;
+    background-color: white;
+    color: black;
+    font-size: 1.2em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.btn2 :hover{
+    background-color: #F7BF50;
+}
+
+/* menu */
+
+#menu{
+    background-color: #7DCFB6;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+.logo{
+    background-color: #F7BF50;
+    width: 100%;
+}
+.menu_elem{
+    background-color: #7DCFB6;
+    margin: 0.2em;
+    display: inline-block;
+    width: 20%;
+    font-weight: bold;
+    padding: 1em;
+}
+.menu_elem:hover{
+    background-color: #00B2CA;
+    color: white;
+}
+.menu_desp{
+    background-color: white;
+    position: absolute;
+    display:none;
+    margin-top: 1em;
+    z-index: 1;
+}
+
+.menu_desp div{
+    width: fit-content;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+}
+.menu_desp div:hover{
+    background-color: #00B2CA;
+    width: max-content;
+    width: 100%;
+}
+.menu_desp div a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+.menu_desp div:hover a{
+    color:white;
+}
+.menu_elem:hover .menu_desp{
+    display: block;
+}
+
+/* login formulario */
+.login{
+    background-color: #F7BF50;
+    width: 70%;
+    border-radius: 2em;
+    margin: auto;
+    margin-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+
+}
+
+.login div{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.registrar{
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background-color: #00B2CA;
+    width: fit-content;
+    padding: 1em;
+}
+
+/* gestion formularios */
+.mng_form{
+    background-color: #00B2CA;
+    padding: 1em;
+    line-height: 2em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+}
+
+/* lista de pisos_fmt */
+.piso_list{
+    padding: 1em;
+    border-radius: 10px;;
+    text-align: center;
+    background-color: #7DCFB6;
+    margin: 1em;
+    display: inline-block;
+    max-width: 40%;
+    min-width: 40%;
+    min-height: 600px;
+    
+}
+.piso_list div{
+    line-height: 1.5em;
+}
+.piso_list div img{
+    width: 80%;
+    height: 20vw;
+    border-radius: 10px;
+    border: solid #F7BF50 0.2em;
+    margin-bottom: 1em;
+    
+}
+
+.compra_btn{
+    margin-top: 1em;
+    background-color: #FBD1A2;
+    color:black
+}
+
+.compra_btn:hover{
+    background-color: #00B2CA;
+    color: white;
+}
+
+/* muestra comprar.php */
+.muestra{
+    background-color: #00B2CA;
+    text-align: center;
+    line-height: 1.5em;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 2em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.muestra img{
+    width: 400px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    border: #F7BF50 solid 0.2em;
+}
+
+.muestra button{
+    margin-top: 0.5em;
+    color: black;
+    background-color: #FBD1A2;
+    width: 14em;
+}
+
+.muestra button:hover{
+    background-color: #1D4E89;
+    color: white;
+}
+
+/* pagina de .perfil */
+.prof{
+    background-color: white;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 10px;
+}
+
+.prof div{
+    text-align: center;
+    padding: 0.2em;
+}
+
+.prof img{
+    border-radius: 50%;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+}
+
+.prof h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* pagina_modificar */
+.mod_btn{
+    width: 70%;
+    background-color: #FBD1A2;
+    color: black;
+    font-size: 1.2em;
+}
+
+.change{
+    background-color: #F7BF50;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.change div{
+    text-align: center;
+}
+
+/* Buscar usuarios */
+.usr_list{
+    background-color: white;
+    text-align: center;
+    line-height: 1.5em;
+    border-radius: 10px;
+    width: 20%;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.usr_list img{
+    width: 150px;
+    margin-bottom: 1em;
+    border-radius: 50%;
+}
+
+/* carrusel */
+.gallery-wrapper {
+    background-color: #dbdbdb;
+    box-sizing: border-box;
+    height: 195px;
+    overflow: hidden;
+    margin-top:1em;
+  }
+  
+  .gallery-scroll {
+    box-sizing: border-box;
+    height: 195px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .gallery {
+    background-color: #dbdbdb;
+    display: flex;
+    box-sizing: border-box;
+    width: max-content;
+    height: 180px;
+    padding: 0px 0px;
+  }
+  
+  .item {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0px 0px;
+  }
+  
+  .item img {
+    display: block;
+    height: 100%;
+  }
+
+
+/* scrollbar fuente: www.w3cshools.com*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+/* secciones */
+.sec1{
+    border-radius: 5px;
+    background-color: white;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+

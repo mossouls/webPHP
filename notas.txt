@@ -1,0 +1,68 @@
+PERMISOS
+Sólo los administradores pueden ver el campo cod_piso.
+Sólo los compradores tienen la opción de comprar los pisos en la página list_pisos
+Los administradores y los vendedores tienen la opción de dar de alta un piso.
+Tanto los compradores, como los vendedores, como los administradores tienene la opción de buscar pisos
+Los usuarios sin registrar solo podrán listar los pisos.
+
+Todos los usuarios registrados tienen acceso a su perfil
+Todos los usuarios registrados pueden borrar su cuenta.
+
+Sólo los administradores pueden borrar otros usuarios y pisos
+Solo los administradores pueden borrar usuarios y buscarlos
+
+Los pisos se dan de alta con el vendedor como propietario
+Cuando un piso se compra el usuario_id pasa de ser el del vendedor del piso al del comprador
+
+LISTA DE PISOS
+Sólo se muestran los pisos que no se han vendido (piso.vendido=0) para los compradores y los vendedores
+Para los administradores se muestran los pisos vendidos y no vendidos
+
+ADMINISTRADORES
+Ver pisos y usuarios (con codigo de piso incluido)
+dar de alta y de baja pisos
+dar de alta y de baja usuarios
+Buscar pisos y usuarios
+Ver su perfil y eliminar su cuenta
+Modificar pisos y usuarios
+Solo pueden registrarse usando la base de datos
+
+COMPRADORES
+ver pisos y tener la opcion a comprarlos
+ver su perfil y eliminar su cuenta
+buscar pisos
+
+VENDEDORES
+dar de alta pisos
+listar pisos y buscarlos
+ver su perfil y eliminarlo
+
+COMPRA Y CAMBIO DE PROPIETARIO
+Cuando el vendedor da de alta el piso, el propietario es el
+Cuando el comprador compra el piso, el id_usuario del piso pasa de ser el del vendedor al del comprador
+
+Modificaciones en la base de datos
+-Añadido un campo "vendido" a pisos BOOL not null.
+-El ID de usuario en pisos no puede ser null (un piso tiene que tener un propietario: comprador o vendedor)
+-El tipo de usuario será enum("admin","comprador","vendedor"). Será not null
+-El código del piso será auto_incremental
+
+CAMBIO DE PROPIETARIO (TRIGGER)
+Cuando un usuario comprador compre un piso
+-se ejecuta un trigger que cambie el estado de vendido a 1
+
+FOTO DE PERFIL
+Por defecto, la foto de perfil será una imagen guardada en la carpeta img llamada usuicon.jpg
+alter table usuarios add imagen varchar(100) default "usuicon.jpg";
+
+TRIGGER PARA CAMBIAR EL ESTADO "vendido" del piso
+
+mysql> DELIMITER //
+mysql> CREATE TRIGGER compra BEFORE UPDATE ON pisos
+    -> FOR EACH ROW
+    -> BEGIN
+    -> IF NEW.usuario_id <> OLD.usuario_id THEN
+    -> SET NEW.vendido=1;
+    -> END IF;
+    -> END//
+Query OK, 0 rows affected (0.05 sec)
